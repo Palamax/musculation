@@ -18,6 +18,9 @@
     <!-- Navbar Right Menu -->
     <div class="navbar-custom-menu">
       <ul class="nav navbar-nav">
+        <li class="dropdown messages-menu">
+          <a href="{{ route('home') }}"><i class="fa fa-home"></i></a>
+        </li>
         <!-- Messages: style can be found in dropdown.less-->
         <li class="dropdown messages-menu">
           <!-- Menu toggle button -->
@@ -121,7 +124,7 @@
             <!-- The user image in the navbar-->
             <img src="//musculation.test/adminlte/img/user2-160x160.jpg" class="user-image" alt="User Image">
             <!-- hidden-xs hides the username on small devices so only the image appears. -->
-            <span class="hidden-xs">Alexander Pierce</span>
+            <span class="hidden-xs">{{ Auth::user()->name }}</span>
           </a>
           <ul class="dropdown-menu">
             <!-- The user image in the menu -->
